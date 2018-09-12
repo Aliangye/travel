@@ -35,8 +35,7 @@ export default {
             id:'0002',
             imgurl:'http://img1.imgtn.bdimg.com/it/u=645703579,3207914544&fm=26&gp=0.jpg'
         }]
-      
-    };
+    }
   }
 };
 </script>

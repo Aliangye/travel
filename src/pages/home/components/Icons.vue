@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="icons">
     <swiper>
         <swiper-slide v-for="(page,index) of pages" :key="index">
             <div class="icons-img" v-for="icon of page" :key="icon.id">
@@ -93,11 +93,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.wrapper {
+.icons {
   overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 51%;
   .icons-img {
     position: relative;
     float: left;
