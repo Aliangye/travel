@@ -4,13 +4,16 @@
     <div class="header-input">
         <input type="text" placeholder="搜索去哪里">
     </div>
-    <div class="header-right">城市</div>
+    <div class="header-right">{{this.city}}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HomeHeader',
+  props:{
+      city:String
+  },
   data () {
     return {
       msg: ''

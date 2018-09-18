@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header></home-header>
+    <home-header :city="city"></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
     <home-recment></home-recment>
@@ -14,10 +14,12 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecment from './components/Recment'
 import HomeWeekend from './components/Homeweekend'
+import axios from 'axios'//引入axios组件
 export default {
   name: 'Home',
   data () {
     return {
+      city:''
     }
   },
   components: {
@@ -26,6 +28,23 @@ export default {
   HomeIcons,
   HomeRecment,
   HomeWeekend,
+  },
+  methods:{
+    getHomeInfo(){
+      axios.get('/api/index.json')
+        .then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc(res){
+      res = res.data
+      if(res.ret && res.data){
+        const data = res.data
+        this.city = data.city
+      }
+    console.log(res)
+    }
+  },
+  mounted () {//生命周期函数  在页面加载之前发送axios请求
+    this.getHomeInfo()
   }
 }
 </script>

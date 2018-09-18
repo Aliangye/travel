@@ -1,7 +1,7 @@
 <template>
   <div class="recment">
     <div class="recment-title">周末旅行</div>
-    <div class="item" v-for="recment of weekendList" :key="recment.id">
+    <div class="item" v-for="recment of recmentList" :key="recment.id">
         <div class="item-img">
             <img :src="recment.imgurl" alt="">
         </div>
@@ -19,7 +19,7 @@ export default {
   name: "HomeWeekend",
   data() {
      return {
-         weekendList:[{
+         recmentList:[{
              id:'0001',
              imgurl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536773092132&di=89acfe6a30619fb630af2806936b3ce0&imgtype=0&src=http%3A%2F%2Fimg1.qunarzz.com%2Ftravel%2Fpoi%2F1412%2Fc7%2Fc7fd4260b404a712cdb.jpg_r_1024x683x95_4d60305a.jpg',
              infoname:'云南佛塔',
@@ -68,7 +68,7 @@ export default {
         width:100%;
         height: 0;
         padding-bottom: 35%;
-        overflow: hidden;
+        overflow: hidden; 
         img{
             width: 100%;
         }
