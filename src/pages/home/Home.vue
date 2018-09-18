@@ -3,8 +3,8 @@
     <home-header></home-header>
     <home-swiper></home-swiper>
     <home-icons></home-icons>
-     <home-recment></home-recment>
-    
+    <home-recment></home-recment>
+    <home-weekend></home-weekend>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecment from './components/Recment'
+import HomeWeekend from './components/Homeweekend'
 export default {
   name: 'Home',
   data () {
@@ -24,6 +25,7 @@ export default {
   HomeSwiper,
   HomeIcons,
   HomeRecment,
+  HomeWeekend,
   }
 }
 </script>
