@@ -1,10 +1,13 @@
 <template>
   <div class="header">
-    <div class="header-left">放回</div>
+    <div class="header-left">返回</div>
     <div class="header-input">
         <input type="text" placeholder="搜索去哪里">
     </div>
-    <div class="header-right">{{this.city}}</div>
+
+    <router-link to='/city'>
+        <div class="header-right">{{this.city}}</div>
+    </router-link>
   </div>
 </template>
 
@@ -47,6 +50,7 @@ export default {
         width: 1.24rem;
         float: right;
         text-align: center;
+        color: #fff;
     }
 }
 </style>
