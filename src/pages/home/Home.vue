@@ -1,10 +1,10 @@
 <template>
   <div>
     <home-header :city="city"></home-header>
-    <home-swiper></home-swiper>
+    <home-swiper :swiperList="swiperList"></home-swiper>
     <home-icons></home-icons>
-    <home-recment></home-recment>
-    <home-weekend></home-weekend>
+    <home-recment :recmentList="recmentList"></home-recment>
+    <home-weekend :recmentList="recmentList"></home-weekend>
   </div>
 </template>
 
@@ -19,7 +19,9 @@ export default {
   name: 'Home',
   data () {
     return {
-      city:''
+      city:'',
+      recmentList:[],
+      swiperList:[]
     }
   },
   components: {
@@ -39,6 +41,8 @@ export default {
       if(res.ret && res.data){
         const data = res.data
         this.city = data.city
+        this.recmentList = data.recmentList
+        this.swiperList = data.swiperList
       }
     console.log(res)
     }
